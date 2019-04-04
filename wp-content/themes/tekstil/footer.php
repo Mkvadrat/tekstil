@@ -37,6 +37,7 @@ Version: 1.0
                                     'link_before'     => '',
                                     'link_after'      => '',
                                     'items_wrap'      => '<ul>%3$s</ul>',
+                                    'walker'          => new footer_menu(),
                                 ) );
                             }
                         ?>
@@ -59,6 +60,7 @@ Version: 1.0
                                     'link_before'     => '',
                                     'link_after'      => '',
                                     'items_wrap'      => '<ul>%3$s</ul>',
+                                    'walker'          => new footer_menu(),
                                 ));
                             }
                         ?>
