@@ -23,7 +23,7 @@ class M_Gallery_Display extends C_Base_Module
 			'photocrati-nextgen_gallery_display',
 			'Gallery Display',
 			'Provides the ability to display gallery of images',
-			'3.1.14',
+			'3.1.17',
 			'https://www.imagely.com/wordpress-gallery-plugin/nextgen-gallery/',
             'Imagely',
             'https://www.imagely.com'
@@ -511,7 +511,20 @@ class C_Display_Type_Installer
 	function get_registry()
 	{
 		return C_Component_Registry::get_instance();
-	}
+    }
+    
+    function delete_duplicates($name)
+    {
+        $mapper				= C_Display_Type_Mapper::get_instance();
+        $results =          $mapper->find_all(array('name = %s', $name));
+        if (count($results) > 0) {
+            $kept = array_pop($results); // the last should be the latest
+            foreach ($results as $display_type) {
+                $mapper->destroy($display_type);
+            }
+        }
+        $mapper->flush_query_cache();
+    }
 
 	/**
 	 * Installs a display type
@@ -520,9 +533,11 @@ class C_Display_Type_Installer
 	 */
 	function install_display_type($name, $properties=array())
 	{
+        $this->delete_duplicates($name);
+
 		// Try to find the existing entity. If it doesn't exist, we'll create
 		$fs					= C_Fs::get_instance();
-		$mapper				= C_Display_Type_Mapper::get_instance();
+        $mapper				= C_Display_Type_Mapper::get_instance();
         $display_type		= $mapper->find_by_name($name);
         $mapper->flush_query_cache();
 		if (!$display_type)	$display_type = new stdClass;

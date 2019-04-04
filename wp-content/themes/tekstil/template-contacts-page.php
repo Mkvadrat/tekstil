@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Contacts page
+Template name: Main page
 Theme Name: Tekstil
 Theme URI: http://mkvadrat.com/
 Author: M2

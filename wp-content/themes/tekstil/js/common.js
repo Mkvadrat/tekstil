@@ -6,6 +6,14 @@ $(document).ready(function () {
         }, 1000);
         e.preventDefault();
     });
+    
+    $('.anchor').bind("click", function (e) {
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 1000);
+        e.preventDefault();
+    });
    
     $(".owl-carousel").owlCarousel({
         nav: true,

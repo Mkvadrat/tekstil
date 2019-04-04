@@ -71,6 +71,15 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
 }
 
+//Изображение в шапке сайта
+$args = array(
+	'width'         => 292,
+	'height'        => 154,
+	'default-image' => get_template_directory_uri() . '/images/logo_default.png',
+	'uploads'       => true,
+);
+add_theme_support( 'custom-header', $args );
+
 //Регистрируем меню
 if(function_exists('register_nav_menus')){
 	register_nav_menus(
@@ -151,9 +160,9 @@ class header_menu extends Walker_Nav_Menu {
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
 
 			if(!empty($has_children)){
-				$item_output = '<a class="nav-link" href="'. $link .'">' . $title .' </a>';
+				$item_output = '<a class="nav-link anchor" href="'. $link .'">' . $title .' </a>';
 			}else{
-				$item_output = '<a class="nav-link" href="'. $link .'">' . $title .'</a>';
+				$item_output = '<a class="nav-link anchor" href="'. $link .'">' . $title .'</a>';
 			}
 		}else if($depth == 1){
 			$has_children = $wpdb->get_results( $wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value = %s AND meta_key = '_menu_item_menu_item_parent'", $item->ID), ARRAY_A);
@@ -163,9 +172,9 @@ class header_menu extends Walker_Nav_Menu {
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
 
 			if(!empty($has_children)){
-				$item_output = '<a class="nav-link" href="'. $link .'">' . $title .' </a>';
+				$item_output = '<a class="nav-link anchor" href="'. $link .'">' . $title .' </a>';
 			}else{
-				$item_output = '<a class="nav-link" href="'. $link .'">' . $title .'</a>';
+				$item_output = '<a class="nav-link anchor" href="'. $link .'">' . $title .'</a>';
 			}
 		}else if($depth >= 2){
 			$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
@@ -218,8 +227,8 @@ function baw_create_menu() {
 
 function register_mysettings() {
 	//register our settings
-	register_setting( 'baw-settings-group', 'pn_logo_a' );
-	register_setting( 'baw-settings-group', 'pn_logo_b' );
+	/*register_setting( 'baw-settings-group', 'pn_logo_a' );
+	register_setting( 'baw-settings-group', 'pn_logo_b' );*/
 
 	register_setting( 'baw-settings-group', 'pn_logo_af' );
 	register_setting( 'baw-settings-group', 'pn_logo_bf' );
@@ -236,7 +245,7 @@ function baw_settings_page() {
 <form method="post" action="options.php">
     <?php settings_fields( 'baw-settings-group' ); ?>
     <table class="form-table">
-        <tr valign="top">
+        <!--<tr valign="top">
 		<td colspan="2"><h3>Настройки шапки сайта</h3></td>
 		</tr>
 		<tr valign="top">
@@ -246,7 +255,7 @@ function baw_settings_page() {
         <tr valign="top">
         <th scope="row">Логотип 2</th>
         <td><input type="text" name="pn_logo_b" value="<?php echo get_option('pn_logo_b'); ?>" size="152" /></td>
-        </tr>
+        </tr>-->
 		
 		<tr valign="top">
 		<td colspan="2"><h3>Настройки подвала сайта</h3></td>

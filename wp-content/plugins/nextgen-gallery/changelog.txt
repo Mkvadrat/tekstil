@@ -1,6 +1,10 @@
 NextGEN Gallery
 by Imagely
 
+= V3.1.17 - 04.02.2019 =
+* Fixed:   Preview images for display types giving get_static_abspath error
+* Fixed:   Compatibility with the Imagely Lightroom plugin
+
 = V3.1.14 - 03.26.2019 =
 * Changed: Restored original behavior of ngg_after_new_images_added hook
 * Changed: Images with EXIF rotation metadata are now rotated automatically at upload
