@@ -31,14 +31,7 @@ Version: 1.0
 <header>
     <div class="container" id="top">
         <nav class="navbar navbar-expand-lg">
-            <div class="logo"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <img
-                src="<?php header_image(); ?>"
-                height="<?php echo get_custom_header()->height; ?>"
-                width="<?php echo get_custom_header()->width; ?>"
-                alt=""
-            />
-            </a>
+            <div class="logo"><a class="navbar-brand" href="#">ТЕК «Стиль»</a><span>Строительно-производственная компания</span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                     aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">

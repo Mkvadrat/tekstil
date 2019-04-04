@@ -9,7 +9,7 @@ Description: Тема для сайта Tekstil
 Version: 1.0
 */
 
-get_header(); 
+get_header();
 ?>
 
 <div class="main">
