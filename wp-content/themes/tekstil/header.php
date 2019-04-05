@@ -31,7 +31,7 @@ Version: 1.0
 <header>
     <div class="container" id="top">
         <nav class="navbar navbar-expand-lg">
-            <div class="logo"><a class="navbar-brand" href="#">ТЕК «Стиль»</a><span>Строительно-производственная компания</span>
+            <div class="logo"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_option('pn_logo_a'); ?></a><span><?php echo get_option('pn_logo_b'); ?></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                     aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
