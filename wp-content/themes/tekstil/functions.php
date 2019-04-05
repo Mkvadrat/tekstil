@@ -323,8 +323,8 @@ function baw_create_menu() {
 
 function register_mysettings() {
 	//register our settings
-	register_setting( 'baw-settings-group', 'pn_logo_a' );
-	register_setting( 'baw-settings-group', 'pn_logo_b' );
+	/*register_setting( 'baw-settings-group', 'pn_logo_a' );
+	register_setting( 'baw-settings-group', 'pn_logo_b' );*/
 
 	register_setting( 'baw-settings-group', 'pn_logo_af' );
 	register_setting( 'baw-settings-group', 'pn_logo_bf' );
@@ -341,7 +341,7 @@ function baw_settings_page() {
 <form method="post" action="options.php">
     <?php settings_fields( 'baw-settings-group' ); ?>
     <table class="form-table">
-        <tr valign="top">
+        <!--<tr valign="top">
 		<td colspan="2"><h3>Настройки шапки сайта</h3></td>
 		</tr>
 		<tr valign="top">
@@ -351,7 +351,7 @@ function baw_settings_page() {
         <tr valign="top">
         <th scope="row">Логотип 2</th>
         <td><input type="text" name="pn_logo_b" value="<?php echo get_option('pn_logo_b'); ?>" size="152" /></td>
-        </tr>
+        </tr>-->
 		
 		<tr valign="top">
 		<td colspan="2"><h3>Настройки подвала сайта</h3></td>
