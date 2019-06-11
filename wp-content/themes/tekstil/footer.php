@@ -15,6 +15,7 @@ Version: 1.0
             <div class="col-12 col-lg-5">
                 <div class="logo">
                     <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_option('pn_logo_af'); ?></a><span><?php echo get_option('pn_logo_bf'); ?></span>
+					<p>© <a href="http://mkvadrat.com">М2 программирование и верстка</a></p>
                 </div>
             </div>
             <div class="col-12 col-lg-7">

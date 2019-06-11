@@ -53,7 +53,7 @@ a:hover {
 .main h2 {
     font-size: 36px;
     color: #23716a;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: -1.4px;
     margin-bottom: 30px;
 }
@@ -340,7 +340,7 @@ img {
 .section-contacts p {
     font-size: 24px;
     color: #23716a;
-    line-height: 24px;
+    line-height: 40px;
     margin: 0;
 }
 
@@ -412,4 +412,7 @@ img {
 
 .section-carousel {
     margin-top: 80px;
+}
+.section-maps{
+	margin-top: 100px;
 }

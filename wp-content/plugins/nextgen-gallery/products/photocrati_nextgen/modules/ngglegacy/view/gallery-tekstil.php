@@ -16,7 +16,7 @@ Follow variables are useable :
 
 	<div class="owl-carousel">
 		<?php foreach ( $images as $image ){ ?>
-		<div><img src="<?php echo nextgen_esc_url($image->imageURL) ?>" alt="<?php echo esc_attr($image->alttext) ?>"></div>
+		<div class="owl-bg" style="background-image: url('<?php echo nextgen_esc_url($image->imageURL) ?>')"></div>
 		<?php } ?>
 	</div>
 	
