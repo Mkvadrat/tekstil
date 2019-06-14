@@ -15,7 +15,7 @@ Version: 1.0
     <meta charset="UTF-8">
     <title><?php echo pn_wp_title('','|', true, 'right'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <?php wp_head(); ?>
 </head>
 <body>
@@ -25,7 +25,7 @@ Version: 1.0
         <div class="top-navbar">
             <div class="left-top-nav">
                 <div class="logo">
-                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                     <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <img
                             src="<?php header_image(); ?>"
                             height="<?php echo get_custom_header()->height; ?>"

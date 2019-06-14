@@ -8,16 +8,16 @@ Description: Тема Tekstil
 Version: 1.0
 */
 ?>
-	
+
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-sm-3">
                 <div class="logo">
                     <?php echo get_option('pn_logo'); ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-sm-9">
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <?php
@@ -75,13 +75,12 @@ Version: 1.0
 </footer>
 
 <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-
 <script type="text/javascript">
     var sevastopolMap, sevastopolPlacemark, sevastopolcoords;
 
     ymaps.ready(init);
 
-    function init () {
+    function init() {
 
         sevastopolMap = new ymaps.Map('sevastopol', {
 
@@ -91,7 +90,7 @@ Version: 1.0
 
         });
 
-        var SearchControl = new ymaps.control.SearchControl({noPlacemark:true});
+        var SearchControl = new ymaps.control.SearchControl({noPlacemark: true});
 
         sevastopolMap.controls
 
@@ -101,7 +100,10 @@ Version: 1.0
 
         sevastopolcoords = [<?php echo get_option('pn_coordinates'); ?>];
 
-        sevastopolPlacemark = new ymaps.Placemark([<?php echo get_option('pn_coordinates'); ?>],{}, {preset: "twirl#redIcon", draggable: true});
+        sevastopolPlacemark = new ymaps.Placemark([<?php echo get_option('pn_coordinates'); ?>], {}, {
+            preset: "twirl#redIcon",
+            draggable: true
+        });
 
         sevastopolMap.geoObjects.add(sevastopolPlacemark);
 

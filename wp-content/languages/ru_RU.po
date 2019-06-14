@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-06-06 12:47:05+0000\n"
+"PO-Revision-Date: 2019-06-13 17:07:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,6 +86,10 @@ msgstr " "
 #: wp-includes/class-wp-locale.php:213
 msgid "number_format_decimal_point"
 msgstr ","
+
+#: wp-includes/customize/class-wp-customize-theme-control.php:97
+msgid "New version available."
+msgstr "Доступна новая версия."
 
 #: wp-includes/load.php:152
 msgid "Insufficient Requirements"
@@ -4223,8 +4227,8 @@ msgctxt "customizer changeset status"
 msgid "Scheduled"
 msgstr "Запланировано"
 
-#: wp-includes/customize/class-wp-customize-theme-control.php:115
-#: wp-includes/customize/class-wp-customize-theme-control.php:123
+#: wp-includes/customize/class-wp-customize-theme-control.php:122
+#: wp-includes/customize/class-wp-customize-theme-control.php:130
 msgctxt "theme"
 msgid "Installed"
 msgstr "Установлена"
@@ -5012,7 +5016,7 @@ msgstr "Назад к источникам тем"
 msgid "Search WordPress.org themes"
 msgstr "Поиск тем на WordPress.org"
 
-#: wp-includes/customize/class-wp-customize-theme-control.php:128
+#: wp-includes/customize/class-wp-customize-theme-control.php:135
 msgid "Install &amp; Preview"
 msgstr "Установка и предпросмотр"
 
@@ -7513,13 +7517,12 @@ msgstr "Фильтр тем"
 msgid "Change theme"
 msgstr "Сменить тему"
 
-#. translators: %s: "Update now" button
-#: wp-includes/customize/class-wp-customize-theme-control.php:97
+#: wp-includes/customize/class-wp-customize-theme-control.php:102
 msgid "Update now"
 msgstr "Обновить сейчас"
 
 #. translators: %s: "Update now" button
-#: wp-includes/customize/class-wp-customize-theme-control.php:97
+#: wp-includes/customize/class-wp-customize-theme-control.php:101
 msgid "New version available. %s"
 msgstr "Доступна новая версия. %s"
 
@@ -9819,7 +9822,7 @@ msgstr[1] "%1$s комментария на &laquo;%2$s&raquo;"
 msgstr[2] "%1$s комментариев на &laquo;%2$s&raquo;"
 
 #. translators: %s: theme name
-#: wp-includes/customize/class-wp-customize-theme-control.php:108
+#: wp-includes/customize/class-wp-customize-theme-control.php:115
 msgid "<span>Previewing:</span> %s"
 msgstr "<span>Предварительный просмотр:</span> %s"
 
@@ -10031,7 +10034,7 @@ msgid "Theme Details"
 msgstr "Информация о теме"
 
 #: wp-includes/script-loader.php:1767
-#: wp-includes/customize/class-wp-customize-theme-control.php:120
+#: wp-includes/customize/class-wp-customize-theme-control.php:127
 msgid "Live Preview"
 msgstr "Просмотреть"
 
@@ -12271,7 +12274,7 @@ msgid "Select file"
 msgstr "Выбрать файл"
 
 #: wp-includes/admin-bar.php:434
-#: wp-includes/customize/class-wp-customize-theme-control.php:112
+#: wp-includes/customize/class-wp-customize-theme-control.php:119
 msgid "Customize"
 msgstr "Настроить"
 

@@ -34,7 +34,6 @@ function tl_scripts(){
 		wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/js/bootstrap.bundle.js', '', '', true );
 		wp_enqueue_script( 'carousel-min', get_template_directory_uri() . '/js/owl.carousel.min.js', '', '', true );
 		wp_enqueue_script( 'parallax-min', get_template_directory_uri() . '/js/parallax.min.js', '', '', true );
-		
 		wp_enqueue_script( 'common-min', get_template_directory_uri() . '/js/common.js', '', '', true );
 	}
 }
